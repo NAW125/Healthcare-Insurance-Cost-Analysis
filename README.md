@@ -61,4 +61,3 @@ Data to Viz https://www.data-to-viz.com/
 # Acknowledgements
 
 Thanks to John Readon for support on a number of IT issues.
-Thanks to the Healthcare team for good team working.
