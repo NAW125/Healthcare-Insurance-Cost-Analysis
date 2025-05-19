@@ -1,75 +1,64 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Health Insurance Cost Analysis
 
-## Template Instructions
+# Project Overview
 
-Welcome,
+This project explores how personal characteristics and regional factors affect healthcare insurance charges. Using a dataset of insurance policyholders, we investigate patterns in cost distribution that can then be used to build predictive models to estimate healthcare expenses in the future.
+The aim is to identify which features most strongly influence insurance charges based on user attributes and demographics.
 
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
+# Hypothesis
 
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
+Individuals who smoke, have a higher BMI, or are older will incur significantly higher insurance charges. Additionally, geographic region may contribute to variations in cost due to external factors such as cost of living, differing healthcare practices, or economic conditions.
 
-## How to use this repo
+# The Dataset
 
-1. Use this template to create your GitHub project repo. Click the Use this template button, then click Create a new repository.
+The dataset has been provided by Kaggle and includes the following columns:
+age: Age of primary beneficiary
+sex: Gender (encoded)
+bmi: Body Mass Index
+children: Number of dependents covered by insurance
+smoker: Smoking status
+region: Residential area in the US (northeast, southeast, southwest, northwest)
+charges: Individual medical costs billed by health insurance
 
-1. Copy the URL of your repository to your clipboard.
+# Ethics
 
-1. In VS Code, select File - Open Folder.
+The dataset used did not contain any personal or identifiable information in the set.
+Objectives
 
-1. Select your vscode-projects folder, then click the Select Folder button on Windows, or Open button on Mac.
+Understand how personal and regional factors correlate with insurance charges
+Visualize relationships using scatter plots and correlation analysis
+Evaluate model performance and feature importance
+Methods & Tools
 
-1. From the top menu in VS Code, select Terminal > New Terminal to open the terminal.
+Python, pandas, NumPy for data processing
+Matplotlib & Seaborn for visualisations
+Jupyter Notebook for analysis and documentation
 
-1. In the terminal, type git clone followed by the URL of your GitHub repository. Then hit Enter. This command will download all the files in your GitHub repository into your vscode-projects folder.
+# Key Insights
 
-1. In VS Code, select File > Open Folder again.
+Smoking has the greatest impact on high costs of healthcare insurance. If all other variables are consistent, the cost for smokers compared to non-smokers is nearly three times as much.
+High BMI and age also contribute to higher prices.
+Regionally, Northwest and Southwest insurance costs are lower, with the Southeast being the most expensive of all four regions analysed.
+The number of children does not appear to significantly affect charges.
+There is a positive correlation between age and charges, particularly among smokers.
+Males and females do not show large cost differences when other variables are held constant.
 
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click Select Folder.
+# Further Investigation
 
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select Command Palette to open the VS Code command palette.
+Linear regression can be used moving forward to better predict the degree to which smoking, BMI, age, and region will affect healthcare insurance costs.
+Additional exploration using regularized models (e.g., Lasso, Ridge) or tree-based models (e.g., Decision Trees, Random Forests) could improve predictive performance and help with feature selection.
 
-1. In the command palette, type: create environment and select Python: Create Environment…
+# References
 
-1. Choose Venv from the dropdown list.
+Resources used include:
 
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
+Code Institute LMS https://learn.codeinstitute.net/ci_program/daai_5
 
-1. DO NOT click the box next to requirements.txt, as you need to do more steps before you can install your dependencies. Click OK.
+ChatGPT https://chatgpt.com/
 
-1. You will see a .venv folder appear in the file explorer pane to show that the virtual environment has been created.
+Data to Viz https://www.data-to-viz.com/
 
-1. Important: Please add the .venv to your .gitignore file
+# Acknowledgements
 
-1. Return to the terminal by clicking on the TERMINAL tab or click on the Terminal menu and choose New Terminal if no terminal is currently open.
-
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
- `pip3 install -r requirements.txt`
-
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
-
-1. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.12.2 as it inherits from the workspace, so it will be Python-3.12.2 as installed by our template. To confirm this, you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-* Set the runtime.txt Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+Thanks to John Readon for support on a number of IT issues.
+Thanks to the Healthcare team for good team working.
