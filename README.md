@@ -41,20 +41,20 @@ Evaluate model performance and feature importance
 - Jupyter Notebook for analysis and documentation
 
 # Key Insights from Data Analysis 
+Below are the key findings from the analysis of factors influencing healthcare insurance charges. 
 
-Smoking has the greatest impact on high costs of healthcare insurance. If all other variables are consistent, the cost for smokers compared to non-smokers is nearly three times as much.
-
-High BMI and age also contribute to higher prices.
-Regionally, Northwest and Southwest insurance costs are lower, with the Southeast being the most expensive of all four regions analysed.
-
-The number of children does not appear to significantly affect charges.
-There is a positive correlation between age and charges, particularly among smokers.
-Males and females do not show large cost differences when other variables are held constant.
+- Smoking has the strongest impact on healthcare insurance costs. When other variables are held constant, smokers pay nearly three times more than non-smokers on average.
+- The box plot shows a clear separation in charges based on smoking status. Smokers have consistently higher charges, with no significant outliers. In contrast, non-smokers display many high-cost outliers, suggesting that other factors — such as age and BMI — also drive up charges.
+- Higher BMI and older age are both associated with increased insurance costs. Individuals who are smokers, older, and have a BMI above 30 are typically among those with the highest charges.
+- Regional differences are evident: the Northwest and Southwest regions show lower average charges, while the Southeast has the highest costs among all four regions analyzed.
+- The number of children does not significantly influence charges.
+- There is a positive correlation between age and charges, especially among smokers.
+- Gender does not show a strong impact on charges when other variables are controlled.
 
 # Further Investigation
 
-Based on this analysis, linear regression is a helpful method for understanding how factors like smoking, BMI, age, and region influence healthcare insurance costs.
-In the future, more advanced techniques—such as improved regression models or decision trees—could be explored to increase prediction accuracy and better identify which factors have the biggest impact.
+This analysis used exploratory visualizations to uncover how smoking status, BMI, age, and region relate to healthcare insurance costs. To build a more complete picture, future datasets should include data on pre-existing medical conditions, as these likely have a major impact on charges. Capturing such information could help identify specific risk profiles and enable the creation of custom insurance products for high-risk groups.
+Looking ahead, applying statistical models — such as linear regression or decision trees — would allow for deeper insights and more accurate predictions about which factors most influence insurance costs.
 
 # References
 
